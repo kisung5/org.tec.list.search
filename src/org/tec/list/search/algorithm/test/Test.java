@@ -19,7 +19,7 @@ class Test {
 	@org.junit.jupiter.api.BeforeAll
 	public static void listDefine() {
 		array = new ArrayList<>();
-		array.add(5);
+		array.add(-5);
 		array.add(2);
 		array.add(8);
 		array.add(10);
@@ -36,8 +36,8 @@ class Test {
 
 	@org.junit.jupiter.api.Test
 	public void binarySearchIntTest() {
-		assertEquals(0,binary.isIn(array, 0));
-		assertEquals(1,binary.isIn(array, 2));
+		assertEquals(1,binary.isIn(array, 0));
+		assertEquals(2,binary.isIn(array, 2));
 		assertEquals(4,binary.isIn(array, 8));
 		assertEquals(5,binary.isIn(array, 10));
 	}
@@ -52,10 +52,10 @@ class Test {
 	
 	@org.junit.jupiter.api.Test
 	public void interpolationintTest() {
-		assertEquals(0,inter.isIn(array, 0));
-		assertEquals(1,inter.isIn(array, 2));
+		assertEquals(1,inter.isIn(array, 0));
+		assertEquals(0,inter.isIn(array, -5));
 		assertEquals(4,inter.isIn(array, 8));
-		assertEquals(2,inter.isIn(array, 4));
+		assertEquals(3,inter.isIn(array, 4));
 	}
 		
 	@org.junit.jupiter.api.Test
