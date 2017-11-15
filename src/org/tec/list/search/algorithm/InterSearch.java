@@ -28,7 +28,7 @@ public class InterSearch <T extends Comparable<T>> {
 		if (array.get(medium).compareTo(valor) == 0) {
 			this.medium = medium;
 			return true;
-		} else if (max == min) {
+		} else if (max == min || min>max) {
 			return false;
 		} else {
 			if (array.get(medium).compareTo(valor) > 0) {
